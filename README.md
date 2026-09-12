@@ -124,6 +124,9 @@ set interface l2 bridge bvi0 100 bvi
 set interface l2 bridge tap0 100
 set interface ip table bvi0 100
 set interface ip address bvi0 172.16.5.10/24
+sonic; sudo ip link set tap master Bridge
+sonic; sudo bridge vlan add vid 100 dev tap pvid untagged
+
 ```
 
 Vérification :
